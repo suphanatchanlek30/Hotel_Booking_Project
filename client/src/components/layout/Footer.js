@@ -12,7 +12,7 @@ export default function Footer() {
             </div>
    
             {/* Quick Links */}
-            <div className="ml-4">
+            <div className="sm:ml-4 ml-0">
               <h4 className="font-raleway font-medium text-lg mb-4">Quick links</h4>
               <ul className="space-y-2">
                 <li><a href="/book" className="text-sm hover:opacity-80 transition-opacity">Room booking</a></li>
