@@ -10,7 +10,7 @@ export default function Home() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
         <div className="flex flex-col lg:flex-row">
           {/* Left Content */}
-          <div className="lg:w-1/2 lg:pr-8 lg:mt-0 text-center lg:text-left">
+          <div className="lg:w-1/2 lg:pr-8 lg:mt-10 text-center lg:text-left">
             <h1 className="font-Dancing text-[40px] sm:text-[45px] lg:text-[50px] text-[#8B7355] mb-3 sm:mb-4">
               Paradise View
             </h1>
