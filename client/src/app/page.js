@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SearchBar from '@/components/ui/SearchBar';
 import Facilities from '@/components/sections/Facilities';
+import LuxuriousRooms from '@/components/sections/LuxuriousRooms';
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2 mt-8 lg:mt-0 w-full">
+          <div className="lg:w-1/2 mt-8 lg:mt-0 w-full ">
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[700px]">
               <Image
                 src="/images/Rectangle 5.svg"
@@ -76,6 +77,9 @@ export default function Home() {
 
       {/* Facilities */}
       <Facilities />
+
+      {/* Luxurious Rooms */}
+      <LuxuriousRooms />
     </div>
   );
 }
