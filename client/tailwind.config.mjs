@@ -12,6 +12,7 @@ export default {
       poppins: ["Poppins", "sans-serif"],
       Dancing: ["Dancing Script", "cursive"],
       inter: ["Inter", "sans-serif"],
+      raleway: ["Raleway", "sans-serif"],
     },
   },
   plugins: [],

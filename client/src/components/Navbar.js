@@ -20,7 +20,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 font-poppins text-[15px] font-medium">
+          <div className="hidden md:flex items-center space-x-12 font-poppins text-[15px] font-medium">
             <Link href="/" className="text-[#000000] hover:text-[#7C6A46]">
               Home
             </Link>
