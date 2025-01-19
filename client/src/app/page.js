@@ -45,13 +45,13 @@ export default function Home() {
               alt="Paradise View Hotel"
               width={600}
               height={400}
-              className=""
+              className="mx-auto ml-[125px]"
             />
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 -mt-40 relative z-10">
+      <div className="px-4 -mt-48 relative z-10">
         <SearchBar />
       </div>
     </div>

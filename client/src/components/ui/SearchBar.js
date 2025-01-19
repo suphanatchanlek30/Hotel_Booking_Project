@@ -10,7 +10,7 @@ export default function SearchBar() {
   const [checkOut, setCheckOut] = useState('13 mar 2023');
 
   return (
-    <div className="w-full bg-white rounded-lg shadow-lg p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="w-full container mx-auto bg-white rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-4">
       {/* Location */}
       <div className="w-full md:w-auto">
         <div className="relative">
