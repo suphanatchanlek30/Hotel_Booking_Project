@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SearchBar from '@/components/ui/SearchBar';
 import Facilities from '@/components/sections/Facilities';
 import LuxuriousRooms from '@/components/sections/LuxuriousRooms';
+import Testimonials from '@/components/sections/Testimonials';
 
 export default function Home() {
   return (
@@ -80,6 +81,9 @@ export default function Home() {
 
       {/* Luxurious Rooms */}
       <LuxuriousRooms />
+
+      {/* Testimonials */}
+      <Testimonials />
     </div>
   );
 }
