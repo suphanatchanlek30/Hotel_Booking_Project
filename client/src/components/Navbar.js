@@ -41,7 +41,7 @@ export default function Navbar() {
           <div>
             <Link 
               href="/book-now"
-              className="bg-[#7C6A46] text-white px-[40px] py-[15px] rounded-[5px] hover:bg-[#6F5B3E]"
+              className="bg-[#7C6A46] text-white px-[40px] py-[15px] rounded-[5px] hover:bg-[#6F5B3E] md:block hidden"
             >
               Book now
             </Link>
