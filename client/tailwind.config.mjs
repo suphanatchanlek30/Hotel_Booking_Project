@@ -6,11 +6,12 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    extend: {},
+    fontFamily: {
+      athiti: ["Athiti", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
+      Dancing: ["Dancing Script", "cursive"],
+      inter: ["Inter", "sans-serif"],
     },
   },
   plugins: [],
