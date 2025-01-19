@@ -3,3 +3,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* เพิ่มต่อจาก styles ที่มีอยู่ */
+.react-datepicker-wrapper {
+    width: auto;
+  }
+  
+  .react-datepicker__input-container input {
+    background: transparent;
+    cursor: pointer;
+    padding: 2px 0;
+  }
+  
+  .react-datepicker {
+    font-family: inherit;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .react-datepicker__header {
+    background-color: #8B7355;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  .react-datepicker__current-month {
+    color: white;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #8B7355 !important;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: #8B7355 !important;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .react-datepicker__navigation-icon::before {
+    border-color: white;
+  }

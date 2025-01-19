@@ -1,18 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function SearchBar() {
   const [location, setLocation] = useState('Abuja');
   const [roomType, setRoomType] = useState('Standard');
   const [persons, setPersons] = useState('01');
-  const [checkIn, setCheckIn] = useState('09 mar 2023');
-  const [checkOut, setCheckOut] = useState('13 mar 2023');
+  const [checkIn, setCheckIn] = useState(new Date());
+  const [checkOut, setCheckOut] = useState(new Date());
 
   return (
-    <div className="w-full container mx-auto bg-white rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="w-full container mx-auto shadow-lg bg-white rounded-lg pt-8 pb-8 flex flex-col md:flex-row items-center justify-between">
       {/* Location */}
-      <div className="w-full md:w-auto">
+      <div className="w-full md:w-auto px-8">
         <div className="relative">
           <div className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
@@ -81,50 +83,54 @@ export default function SearchBar() {
         </div>
       </div>
 
-      {/* Check In */}
-      <div className="w-full md:w-auto">
-        <div className="relative">
-          <div className="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-            </svg>
-            <div>
-              <label className="block text-sm text-gray-500">Check in</label>
-              <input 
-                type="text" 
-                className="block w-full text-gray-900 focus:outline-none"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-              />
-            </div>
-          </div>
+       {/* Check In */}
+       <div className='flex flex-col md:flex-row items-center'>
+       <div className="flex items-center gap-2">
+        <span className="text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+          </svg>
+        </span>
+        <div>
+          <div className="text-sm text-gray-500">Check in</div>
+          <DatePicker
+            selected={checkIn}
+            onChange={(date) => setCheckIn(date)}
+            className="outline-none text-gray-700 cursor-pointer"
+            dateFormat="dd MMM yyyy"
+            minDate={new Date()}
+            placeholderText="Select date"
+          />
         </div>
       </div>
 
       {/* Check Out */}
-      <div className="w-full md:w-auto">
-        <div className="relative">
-          <div className="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-            </svg>
-            <div>
-              <label className="block text-sm text-gray-500">Check out</label>
-              <input 
-                type="text" 
-                className="block w-full text-gray-900 focus:outline-none"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-              />
-            </div>
-          </div>
+      <div className="flex items-center gap-2">
+        <span className="text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+          </svg>
+        </span>
+        <div>
+          <div className="text-sm text-gray-500">Check out</div>
+          <DatePicker
+            selected={checkOut}
+            onChange={(date) => setCheckOut(date)}
+            className="outline-none text-gray-700 cursor-pointer"
+            dateFormat="dd MMM yyyy"
+            minDate={checkIn}
+            placeholderText="Select date"
+          />
         </div>
+      </div>
       </div>
 
       {/* Book Now Button */}
-      <button className="w-full md:w-auto px-6 py-2 bg-[#8B7355] text-white rounded hover:bg-[#6F5B3E]">
-        Book Now
-      </button>
+      <div className='pr-8'>
+        <button className="w-full md:w-auto px-14 py-4 bg-[#8B7355] text-white rounded hover:bg-[#6F5B3E]">
+          Book Now
+        </button>
+      </div>
     </div>
   );
 }
