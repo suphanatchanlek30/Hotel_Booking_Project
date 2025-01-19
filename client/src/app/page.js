@@ -4,6 +4,7 @@ import SearchBar from '@/components/ui/SearchBar';
 import Facilities from '@/components/sections/Facilities';
 import LuxuriousRooms from '@/components/sections/LuxuriousRooms';
 import Testimonials from '@/components/sections/Testimonials';
+import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
@@ -84,6 +85,9 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
