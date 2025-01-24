@@ -109,9 +109,9 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl lg:text-[30px] font-semibold text-center mb-12 font-raleway">
             Clients
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
             {clientLogos.map((logo, index) => (
-              <div key={index} className="w-32 sm:w-20">
+              <div key={index} className="w-16 sm:w-20">
                 <img src={logo.src} alt={logo.alt} className="w-full h-auto" />
               </div>
             ))}
